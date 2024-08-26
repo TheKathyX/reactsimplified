@@ -1,13 +1,15 @@
 import React from "react";
 import { TodoList } from "../ToDoList";
+import { Name } from "../name";
 
 function App() {
   return (
     <div>
       <h1>TodoList</h1>
       <TodoList />
+      <Name />
     </div>>
-  );
+  )
 }
 
 export default App;
@@ -23,7 +25,7 @@ function App() {
 } 
 */
 
-// Remove the text in hi
+// Exercise #2: Remove the text in hi
 // Add a label with the for prop set to inputId and any text
 // Add an input with the id InputId, type number, and value of 3 as a number
 /*
@@ -36,3 +38,14 @@ function App() {
   );
 } 
 */
+
+// Exercise #3: Create a component that renders and H1 with your name in it.
+/*
+function App() {
+  return (
+    <div>
+      <Name />
+    </div>>
+  )
+}
+  */
