@@ -1,10 +1,12 @@
 import React from "react";
+import { TodoList } from "../ToDoList";
 
 function App() {
   return (
-    <h1 id="5" tabIndex>
-      Hello World <span>Bye</span>
-    </h1>
+    <div>
+      <h1>TodoList</h1>
+      <TodoList />
+    </div>>
   );
 }
 
@@ -23,7 +25,7 @@ function App() {
 
 // Remove the text in hi
 // Add a label with the for prop set to inputId and any text
-// Ad an input with the id InputId, type number, and value of 3 as a number
+// Add an input with the id InputId, type number, and value of 3 as a number
 /*
 function App() {
   return (
