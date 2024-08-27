@@ -59,9 +59,7 @@ import { NameClass } from "./NameClass"
 function App() {
   return (
     <div>
-      <NameFunc name="Custom Name" age = {27} />
-      <NameFunc name="Different Name" age = {57} />
-
+      <NameFunc name="Different Name" isProgrammer={false} />
       {/* <NameClass /> */}
     </div>
   )

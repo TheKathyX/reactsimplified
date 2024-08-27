@@ -1,6 +1,9 @@
-export function NameFunc({ name, age = 30 }) {
-  return;
-  <div>
-    {Name} {age}
-  </div>;
+export function NameFunc({ name, age = 30, isProgrammer }) {
+  console.log("Is Programmer", isProgrammer);
+
+  return (
+    <div>
+      {Name} {age}
+    </div>
+  );
 }
