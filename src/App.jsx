@@ -50,3 +50,19 @@ function App() {
   )
 }
   */
+
+// For Props section
+import React from "react"
+import { NameFund } from "./NameFunc"
+import { NameClass } from "./NameClass"
+
+function App() {
+  return (
+    <div>
+      <NameFunc name="Custom Name" age = {27} />
+      <NameFunc name="Different Name" age = {57} />
+
+      {/* <NameClass /> */}
+    </div>
+  )
+}
