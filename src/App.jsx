@@ -2,6 +2,7 @@ import React from "react";
 // import { TodoList } from "../ToDoList";
 import { Name } from "../name";
 import { ToDoListClass } from "../ToDoListClass";
+import { ToDoListItem } from "../ToDoListItem";
 
 function App() {
   return (
@@ -52,7 +53,7 @@ function App() {
   */
 
 // For Props section
-import React from "react"
+/* import React from "react"
 import { NameFund } from "./NameFunc"
 import { NameClass } from "./NameClass"
 
@@ -60,7 +61,16 @@ function App() {
   return (
     <div>
       <NameFunc name="Different Name" isProgrammer={false} />
-      {/* <NameClass /> */}
+      {/* <NameClass /> }
     </div>
+  )
+} */
+
+// Exercise #4 
+function App() {
+  return (
+    <ToDoListItem isComplete>
+      Todo Item 1
+    </ToDoListItem>
   )
 }
