@@ -1,3 +1,5 @@
+// React way of doing things
+
 export function User({ name, age }) {
   return (
     <h1>
@@ -6,6 +8,7 @@ export function User({ name, age }) {
   );
 }
 
+// Normals javascript way of doing things
 // create H1
 const h1 = document.createElement("h1");
 // Put name in h1
