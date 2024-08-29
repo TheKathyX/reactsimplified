@@ -3,6 +3,7 @@ import React from "react";
 import { Name } from "../name";
 import { ToDoListClass } from "../ToDoListClass";
 import { ToDoListItem } from "../ToDoListItem";
+import "./styles.css";
 
 function App() {
   return (
@@ -10,8 +11,8 @@ function App() {
       <h1>TodoList</h1>
       <ToDoListClass />
       <Name />
-    </div>>
-  )
+    </div>
+  );
 }
 
 export default App;
@@ -66,11 +67,7 @@ function App() {
   )
 } */
 
-// Exercise #4 
+// Exercise #4
 function App() {
-  return (
-    <ToDoListItem isComplete>
-      Todo Item 1
-    </ToDoListItem>
-  )
+  return <ToDoListItem isComplete>Todo Item 1</ToDoListItem>;
 }

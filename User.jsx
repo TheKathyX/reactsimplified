@@ -8,7 +8,7 @@ export function User({ name, age }) {
   );
 }
 
-// Normals javascript way of doing things
+// Normal javascript way of doing things
 // create H1
 const h1 = document.createElement("h1");
 // Put name in h1
