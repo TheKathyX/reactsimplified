@@ -4,6 +4,7 @@ import { Name } from "../name";
 import { ToDoListClass } from "../ToDoListClass";
 import { ToDoListItem } from "../ToDoListItem";
 import "./styles.css";
+import img from "./Code.png"
 
 function App() {
   return (
@@ -68,8 +69,16 @@ function App() {
 } */
 
 // Exercise #4
+/*
 function App() {
   return <ToDoListItem isComplete>Todo Item 1</ToDoListItem>;
 }
+*/
 
-// note to delete later
+// Adding an img
+
+function App() {
+  return <img src={img} />
+}
+
+export default App;
