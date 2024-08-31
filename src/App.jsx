@@ -4,7 +4,7 @@ import { Name } from "../name";
 import { ToDoListClass } from "../ToDoListClass";
 import { ToDoListItem } from "../ToDoListItem";
 import "./styles.css";
-import img from "./Code.png"
+import img from "./Code.png";
 
 function App() {
   return (
@@ -76,9 +76,10 @@ function App() {
 */
 
 // Adding an img
-
+/*
 function App() {
   return <img src={img} />
 }
 
 export default App;
+*/
