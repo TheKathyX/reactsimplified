@@ -83,3 +83,17 @@ function App() {
 
 export default App;
 */
+
+// Using useState
+/*import { useState } from "react"
+
+function App() {
+  const values = useState()
+  const name = values[0]
+  const setName = values[1]
+
+  return <h1>Hi</h1>
+}
+
+export default App 
+*/
