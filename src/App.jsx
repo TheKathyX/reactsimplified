@@ -121,3 +121,16 @@ return (
     </h1>
 )
 */
+
+// Exercise #5
+// Create a new component called Counter
+// have a state for a counter that starts at 0 and render that in the JSX
+// When you click the number increment it by 1
+
+/*
+import { counterFunc } from "../counter";
+
+function App() {
+  return <counterFunc />;
+}
+*/
