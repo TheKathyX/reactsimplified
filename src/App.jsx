@@ -105,6 +105,14 @@ const [age, setAge] = useState(27)
 function handleClick() {
   setName("Sally")
   setName(age +1)
+
+  // having the age up by 2 
+  setAge(currentAge => {
+    return currentAge + 1
+    })
+    setAge(currentAge => {
+      return currentAge + 1
+      })
 }
 
 return (
