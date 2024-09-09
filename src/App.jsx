@@ -134,3 +134,12 @@ function App() {
   return <counterFunc />;
 }
 */
+
+// For CounterClass
+/*
+export default class AppClass extends React.Component {
+  render() {
+    return <CounterClass />
+  }
+}
+  */
