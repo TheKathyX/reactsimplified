@@ -7,7 +7,8 @@ import { useState } from "react";
 const INITIAL_VALUE = ["A", "B", "C"];
 
 function App() {
-  const [array, setArray] = useState[INITIAL_VALUE];
+  const [array, setArray] = useState(INITIAL_VALUE);
+  const [value, setValue] = useState("");
 
   function removeFirstElement() {
     setArray((currentArray) => {
@@ -42,9 +43,23 @@ function App() {
     setArray(INITIAL_VALUE);
   }
 
+  // use the map function to change the current array to the selected one
+  // use map if you need to update one specific item in the array
   function updateAToH() {
     setArray((currentArray) => {
-      return currentArray.slice(1);
+      return currentArray.map((element) => {
+        if (element == "A") return "H";
+        return element;
+      });
+    });
+  }
+
+  function addLetterAtIndex(letter, index) {
+    setArray((currentArray) => {
+      return [
+        ...currentArray.slice(0, index).letter,
+        ...currentArray.slice(index),
+      ];
     });
   }
 
@@ -61,6 +76,16 @@ function App() {
       <button onClick={clear}>Clear</button>
       <br />
       <button onClick={reset}>Reset</button>
+      <br />
+      <button onClick={updateAToH}>Update A to H</button>
+      <br />
+      <button onClick={() => addLetterAtIndex("C", 2)}>Add to C at 2</button>
+      <br />
+      <input value={value} onChange={(e) => setValue(e.target.value)} />
+      <br />
+      <button onClick={() => addLetterToStart(value)}>
+        Add Value to Array
+      </button>
       <br />
       {array.join(",")}
       <br />
