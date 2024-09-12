@@ -144,4 +144,30 @@ export default class AppClass extends React.Component {
 }
   */
 
-// A message to delete later
+
+// Learning Arrays
+// Adding a button to remove the first element
+
+import { useState } from "react"
+
+function App() {
+  const [array, setArray] = useState(["A", "B", "C"])
+
+  function removeFirstElement() {
+    setArray(currentArray => {
+      return currentArray.Slice(1)
+    })
+  }
+
+
+
+  return <div>
+    <button onClick={removeFirstElement}>Remove First Element</button>
+    <br />
+    <br />
+    {array.join(",")}
+
+  </div>
+}
+
+export default App
