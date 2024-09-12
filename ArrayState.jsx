@@ -42,7 +42,11 @@ function App() {
     setArray(INITIAL_VALUE);
   }
 
-  function updateAToH() {}
+  function updateAToH() {
+    setArray((currentArray) => {
+      return currentArray.slice(1);
+    });
+  }
 
   return (
     <div>
