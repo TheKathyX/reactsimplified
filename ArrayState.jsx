@@ -93,4 +93,6 @@ function App() {
   );
 }
 
+// Leaving a note here to delete
+
 export default App;
