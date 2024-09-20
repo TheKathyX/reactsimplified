@@ -6,5 +6,11 @@ export function Child() {
 
   console.log("render child");
 
-  return <div className="child"></div>;
+  return (
+    <div className="child">
+      <input value={name} onChange={(e) => setName(e.target.value)} />
+      <br />
+      My name is {name}.
+    </div>
+  );
 }
