@@ -93,8 +93,4 @@ function App() {
   );
 }
 
-// Leaving a note here to delete
-// leaving another note to delete
-// leaving the 3rd note to delete...
-
 export default App;
