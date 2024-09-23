@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { render } from "react-dom";
 
 export function Child() {
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
 
-  console.log("render child");
+  useEffect(() => {
+    console.log("Name or count was changed", name, count);
+  }, [name, count]);
 
   return (
     <div className="child">
