@@ -9,6 +9,14 @@ export function Child() {
     console.log("Name or count was changed", name, count);
   }, [name, count]);
 
+  // showing the number of the width of the page
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      console.log("Here");
+      setWidth(window.innerWidth);
+    });
+  }, []);
+
   return (
     <div className="child">
       <input value={name} onChange={(e) => setName(e.target.value)} />
