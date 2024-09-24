@@ -17,6 +17,18 @@ export function Child() {
     });
   }, []);
 
+  // updating effect
+  useEffect(() => {
+    const handler = () => {
+      console.log(name);
+    };
+    document.addEventListener("click", handler);
+
+    return () => {
+      document.removeEventListener("click", handler);
+    };
+  }, [name]);
+
   return (
     <div className="child">
       <input value={name} onChange={(e) => setName(e.target.value)} />
