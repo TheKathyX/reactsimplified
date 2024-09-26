@@ -4,6 +4,7 @@ import { render } from "react-dom";
 export function Child() {
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
+  const [width, setWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     console.log("Name or count was changed", name, count);
@@ -29,6 +30,20 @@ export function Child() {
     };
   }, [name]);
 
+  // adding new event listeners everytime the use effect runs, showing the updated version -> fixed version
+  useEffect(() => {
+    const handler = () => {
+      console.log(name);
+    };
+    doucment.addEventListener("click", handler);
+    console.log("inside effect");
+
+    return () => {
+      document.removeEventListener("click", handler);
+      console.log("cleanup");
+    };
+  }, [name]);
+
   return (
     <div className="child">
       <input value={name} onChange={(e) => setName(e.target.value)} />
@@ -40,6 +55,9 @@ export function Child() {
       <br />
       <br />
       My name is {name} and I am {age} years old.
+      <br />
+      <br />
+      Width: {width}
     </div>
   );
 }
