@@ -44,6 +44,21 @@ export function Child() {
     };
   }, [name]);
 
+  // Lifecycle Methods
+  componentDidMount() {
+    console.log("Mount")
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.name != this.state.name) {
+      console.log("Name has changed")
+    }
+  }
+
+  componentWillUnmount() {
+    console.log("Unmount")
+  }
+
   return (
     <div className="child">
       <input value={name} onChange={(e) => setName(e.target.value)} />
