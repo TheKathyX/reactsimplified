@@ -9,6 +9,41 @@ export class Child extends React.Component {
     };
   }
 
+  componentDidMount() {
+    console.log("Hi");
+    console.log("Render");
+  }
+
+  componentDidUpdate() {
+    console.log("Render");
+  }
+
+  componentChange(prevProps, prevState) {
+    console.log("Render");
+
+    if (
+      prevState.name !== this.state.name ||
+      prevState.age !== this.state.age
+    ) {
+      console.log(
+        `My name is ${this.state.name} years old and I am ${this.state.age} years old`
+      );
+    }
+
+    if (prevState.name !== this.state.name) {
+      document.title = this.state.name;
+
+      if (this.nameTimeout != null) clearTimeout(this.nameTimeout);
+      this.nameTimeout = setTimeout(() => {
+        console.log(`My name is ${this.state.name}`);
+      }, 1000);
+    }
+  }
+
+  componentWillUnmount() {
+    console.log("Bye");
+  }
+
   render() {
     return (
       <div>
