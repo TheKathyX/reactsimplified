@@ -32,17 +32,17 @@ export function ChildExercise() {
       console.log("Bye");
     };
   }, []);
-{
+
   // Create a timeout that console.log's the text My name is {name} only after there has been a 1 second delay since the last time the name was changed
   useEffect(() => {
     setTimeout(() => {
       console.log(`my name is ${name}`);
-    }, 1000)
+    }, 1000);
 
     return () => {
-        clearTimeout(timeout)
-    }
-  }, [name])
+      clearTimeout(timeout);
+    };
+  }, [name]);
 
   return (
     <div>
