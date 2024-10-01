@@ -5,7 +5,30 @@ export class Child extends React.Component {
     super(props);
 
     this.state = {
-      name,
+      name: "",
+      age: 0,
     };
+  }
+
+  render() {
+    return (
+      <div>
+        <input
+          value={this.state.name}
+          onChange={(e) => this.setState({ name: e.target.value })}
+        />
+        <br />
+        <br />
+        <button
+          onclick={() =>
+            this.setState((currentState) => {
+              return {
+                age: currentState.age - 1,
+              };
+            })
+          }
+        ></button>
+      </div>
+    );
   }
 }
