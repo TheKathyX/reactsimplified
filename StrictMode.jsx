@@ -5,6 +5,9 @@ export function Child() {
   const [name, setName] = useState("");
 
   useEffect(() => {
+    document.addEventListener("click", () => {
+      console.log("Click");
+    });
     console.log("Mount");
 
     return () => {
