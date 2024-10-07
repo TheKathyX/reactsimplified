@@ -4,11 +4,15 @@ export function Child() {
   const [age, setAge] = useState(0);
   const [name, setName] = useState("");
 
+  globalVar = globalVar + 1;
+  console.log(globalVar);
+
+  // going to douible execute a bunch of things in your code to check for bugs
+
   useEffect(() => {
     document.addEventListener("click", () => {
       console.log("Click");
     });
-    console.log("Mount");
 
     return () => {
       console.log("Unmount");
