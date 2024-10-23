@@ -8,4 +8,13 @@ function App() {
     useEffect(() => {
         DocumentFragment.title = count 
     }, [count])
+
+
+    return (
+        <>
+        <Button onClick={() => setCount(c => c - 1)}>-</Button>
+        {count}
+        <Button onClick={() => setCount(c => c + 1)}>+</Button>
+        </>
+    )
 }
