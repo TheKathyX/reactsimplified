@@ -33,7 +33,16 @@ function App() {
       ) : (
         <ul>
           {users.map((user) => {
-            return <User key={user.id} name={user.name} />;
+            return (
+              <User
+                key={user.id}
+                name={user.name}
+                email={user.email}
+                phone={user.phone}
+                username={user.username}
+              />
+              // a spread syntax is {...user} this will go through all the inputs if you have alot
+            );
           })}
         </ul>
       )}
