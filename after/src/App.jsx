@@ -10,7 +10,8 @@ function App() {
     setIsLoading(true);
 
     const controller = new AbortController();
-    fetch("https://jsonplaceholder.typicode.com/users", {
+    // full url: "https://jsonplaceholder.typicode.com/users"
+    fetch("users.json", {
       signal: constroller.signal,
     })
       .then((res) => res.json())
