@@ -9,7 +9,16 @@ function App() {
       .then(setUsers);
   });
 
-  return null;
+  return (
+    <>
+      <h1>User List</h1>
+      <ul>
+        {users.map((user) => {
+          return <User name={user.name} />;
+        })}
+      </ul>
+    </>
+  );
 }
 
 export default App;
