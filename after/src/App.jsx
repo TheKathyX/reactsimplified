@@ -52,4 +52,14 @@ function App() {
 
 export default App;
 
-// note
+// rendering a raw html
+// never want to use the dangerousHTML thing because hackers can get into it (cross site crypting, etc)
+
+/* const CUSTOM_HTML = ` 
+<h1>Hi</h1> 
+<div>My name is Kyle</div>
+`;
+function App() {
+  return <div dangerouslySetInnerHTML={{ _html: CUSTOM_HTML }}></div>;
+} 
+*/
