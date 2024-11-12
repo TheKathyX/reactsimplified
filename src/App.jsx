@@ -150,12 +150,27 @@ function App() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    document.title = count;
+    if (count > 5) {
+      document.title = count
+    }
   }, [count]);
 
+  if (count > 5) return "hi"
   return (
     <>
       <button onClick={() => setCount((c) => c - 1)}>-</button>
+      {count}
+      <button onClick={() => setCount(c => c + 1)}>+</button>
     </>
   );
 }
+
+function printName(name) {
+  useEffect(() => {
+    console.log("In use effect")
+  }, [name])
+
+  console.log(name)
+}
+
+export default App
