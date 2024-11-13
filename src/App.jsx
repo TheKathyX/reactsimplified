@@ -144,18 +144,14 @@ export default class AppClass extends React.Component {
 }
   */
 
+/* -> 43 - Hook Rules
 import { useState, useEffect } from "react";
 
-function App() {
+printName("dsds")
+
+function const count: number {
   const [count, setCount] = useState(0);
 
-  useEffect(() => {
-    if (count > 5) {
-      document.title = count
-    }
-  }, [count]);
-
-  if (count > 5) return "hi"
   return (
     <>
       <button onClick={() => setCount((c) => c - 1)}>-</button>
@@ -164,6 +160,7 @@ function App() {
     </>
   );
 }
+
 
 function printName(name) {
   useEffect(() => {
@@ -174,3 +171,5 @@ function printName(name) {
 }
 
 export default App
+
+*/
