@@ -13,6 +13,7 @@ function App() {
       <button onClick={() => (kyleRef.current = Math.random())}>
         Change ref
       </button>
+      <button onClick={() => console.log(kyleRef.current)}>Print Ref</button>
     </>
   );
 }
