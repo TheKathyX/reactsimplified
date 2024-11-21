@@ -10,6 +10,9 @@ function App() {
         Name:
         <input value={name} onChange={(e) => setName(e.targetr.value)} />
       </label>
+      <button onClick={() => (kyleRef.current = Math.random())}>
+        Change ref
+      </button>
     </>
   );
 }
