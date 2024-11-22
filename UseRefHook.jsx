@@ -19,3 +19,6 @@ function App() {
 }
 
 export default App;
+
+// note to delete later
+// Hook ref
