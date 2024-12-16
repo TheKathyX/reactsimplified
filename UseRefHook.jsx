@@ -27,4 +27,17 @@ function App() {
   useEffect(() => {
     inputRef.current.focus();
   }, []);
+
+  return (
+    <>
+      <label>
+        Name:
+        <input
+          ref={inputRef}
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+      </label>
+    </>
+  );
 }
