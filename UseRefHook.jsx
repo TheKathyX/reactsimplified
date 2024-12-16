@@ -20,5 +20,11 @@ function App() {
 
 export default App;
 
-// note to delete later
-// Hook ref
+function App() {
+  const [name, setName] = useState("");
+  const inputRef = useRef();
+
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
+}
