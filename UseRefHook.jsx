@@ -20,6 +20,7 @@ function App() {
 
 export default App;
 
+/*
 function App() {
   const [name, setName] = useState("");
   const inputRef = useRef();
@@ -40,4 +41,4 @@ function App() {
       </label>
     </>
   );
-}
+} */
